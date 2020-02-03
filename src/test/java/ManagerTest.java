@@ -31,15 +31,18 @@ public class ManagerTest {
 
     @Test
     public void canPayBonus() {
-        assertEquals("Kate", manager.getName());
+        assertEquals(1200, manager.payBonus());
+    }
+
+    @Test
+    public void canGetDeptName() {
+        assertEquals("Operations", manager.getDeptName());
     }
 
     @Test
     public void canRaiseSalary() {
-        assertEquals(1200, manager.payBonus());
+        manager.raiseSalary(1000.00);
+        assertEquals(121000, manager.getSalary());
     }
 
-    public void canGetDeptName() {
-        assertEquals("Operations", manager.getDeptName());
-    }
 }

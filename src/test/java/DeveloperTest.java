@@ -31,11 +31,12 @@ public class DeveloperTest {
 
     @Test
     public void canPayBonus() {
-        assertEquals("Kate", developer.getName());
+        assertEquals(1200, developer.payBonus());
     }
 
     @Test
     public void canRaiseSalary() {
-        assertEquals(1200, developer.payBonus());
+        developer.raiseSalary(1000.00);
+        assertEquals(121000, developer.getSalary());
     }
 }
